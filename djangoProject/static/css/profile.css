@@ -1,0 +1,123 @@
+
+body{
+background:#AAABB8 !important
+}
+
+.heading-container {
+  text-align: center;
+}
+
+.heading {
+  font-weight: 600;
+}
+
+.credit {
+  margin: 10px 0px;
+  color: #888888;
+  font-size: 25px;
+  transition: all 0.5s;
+}
+
+.credit /*a*/ {
+  color: inherit;
+}
+
+/*a,*/
+.card__exit,
+.card__icon {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.trophy{
+    margin:auto;
+    padding-top: 10px;
+    width:40px;
+    height:50px;
+}
+
+/*a::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}*/
+
+/*a:hover::after {
+  width: 100%;
+}*/
+
+.main-container {
+  padding: 30px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.achievement_card {
+  margin: 2%;
+  padding: 2%;
+  width: 100%;
+  min-height: 100px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.5s;
+}
+
+.achievement_card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+.card__icon {
+  grid-row: 2/3;
+  font-size: 30px;
+}
+
+.card__title {
+  grid-row: 5/5;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.card__apply {
+  grid-row: 4/4;
+  align-self: center;
+  color: #ffffff;
+}
+
+.card-1 {
+  background: radial-gradient(#719ceb, #6495ED);
+}
+
+.card-2 {
+  background: radial-gradient(#719ceb, #6495ED);
+}
+
+.card-3 {
+  background: radial-gradient(#719ceb, #6495ED);
+}
+
+.card-4 {
+  background: radial-gradient(#719ceb, #6495ED);
+}
+
+.card-5 {
+  background: radial-gradient(#719ceb, #6495ED);
+}
+
+@media (max-width: 1600px) {
+  .card-container {
+    justify-content: center;
+  }
+}

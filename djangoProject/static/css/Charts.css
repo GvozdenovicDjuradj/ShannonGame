@@ -1,0 +1,208 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+@keyframes bake-pie {
+  from {
+    transform: rotate(0deg) translate3d(0,0,0);
+  }
+}
+section {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pieID, .totalGames {
+  display: inline-block;
+  vertical-align: top;
+}
+.pie {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  margin: 0 30px 30px 0;
+}
+.pie::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  background: #EEE;
+  border-radius: 50%;
+  top: 50px;
+  left: 50px;
+}
+.pie::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 50%;
+  box-shadow: 0 0 3px 4px rgba(0,0,0,0.1);
+  margin: 220px auto;
+
+}
+.slice {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  clip: rect(0px, 200px, 200px, 100px);
+  animation: bake-pie 1s;
+}
+.slice span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  clip: rect(0px, 200px, 200px, 100px);
+}
+.legend {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background: #FFF;
+  padding: 15px;
+  font-size: 13px;
+  box-shadow: 1px 1px 0 #DDD,
+              2px 2px 0 #BBB;
+}
+.legend li {
+  width: 190px;
+  height: 1.25em;
+  margin-bottom: 0.7em;
+  padding-left: 0.5em;
+  border-left: 1.25em solid black;
+}
+.legend em {
+  font-style: normal;
+}
+.legend span {
+  float: right;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 13px;
+  background: #DDD;
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+
+
+
+
+/* Regular Styles */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+ html {
+	 box-sizing: border-box;
+}
+ *, *:before, *:after {
+	 box-sizing: inherit;
+}
+ body {
+	 font-family: 'Open Sans', sans-serif;
+	 color: #4e555f;
+	 font-size: 14px;
+}
+ .chart-wrap {
+	 max-width: 900px;
+	 margin: 0 auto;
+	 padding: 10px;
+}
+ .chart-wrap .chart-title {
+	 margin-bottom: 10px;
+	 font-size: 16px;
+	 text-align: center;
+	 text-transform: uppercase;
+}
+ .chart-wrap .row {
+	 position: relative;
+	 height: 26px;
+	 margin-bottom: 15px;
+}
+ .chart-wrap .bar-wrap {
+	 position: relative;
+	 background: #d7dbde;
+	 width: 100%;
+	 height: 100%;
+	 overflow: hidden;
+}
+ .chart-wrap .bar-wrap .bar {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 height: 100%;
+	 background: #6b6e9c;
+	 transition: all 1s;
+	 transform: translateX(-100%);
+}
+ .chart-wrap .bar-wrap .bar.in {
+	 transform: translateX(0%);
+}
+ .chart-wrap .row:nth-of-type(1) .bar {
+	 transition: 1s 400ms;
+}
+ .chart-wrap .row:nth-of-type(2) .bar {
+	 transition: 1s 600ms;
+}
+ .chart-wrap .row:nth-of-type(3) .bar {
+	 transition: 1s 800ms;
+}
+ .chart-wrap .row:nth-of-type(4) .bar {
+	 transition: 1s 1000ms;
+}
+ .chart-wrap .row:nth-of-type(5) .bar {
+	 transition: 1s 1200ms;
+}
+ .chart-wrap .row:nth-of-type(6) .bar {
+	 transition: 1s 1400ms;
+}
+ .chart-wrap .row:nth-of-type(7) .bar {
+	 transition: 1s 1600ms;
+}
+ .chart-wrap .label {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 150px;
+	 padding-left: 10px;
+	 text-align: left;
+	 font-size: 12px;
+	 line-height: 26px;
+	 text-transform: uppercase;
+	 font-weight: bold;
+	 z-index: 10;
+}
+ .chart-wrap .number {
+	 position: absolute;
+	 top: 0;
+	 right: 0;
+	 width: 30px;
+	 padding-right: 10px;
+	 font-size: 15px;
+	 line-height: 26px;
+	 font-weight: bold;
+	 text-align: right;
+	 z-index: 10;
+}
+ @media screen and (min-width: 800px) {
+	 .chart-wrap .row {
+		 padding: 0 40px 0 160px;
+	}
+	 .chart-wrap .label {
+		 text-align: right;
+		 padding-left: 0;
+	}
+	 .chart-wrap .number {
+		 text-align: left;
+		 padding-right: 0;
+	}
+}

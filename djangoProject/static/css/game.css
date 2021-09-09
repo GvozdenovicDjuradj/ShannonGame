@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body{
+background:#AAABB8 !important
+}
+
+
+#resign_btn{
+    color: white;
+    background-color: transparent;
+    height:50px;
+    width:180px;
+    font-size: 26px;
+}
+
+.dialogWrapper{
+
+}
+
+.dialogWrapper .modal_btn{
+	background: #647374;
+	color: #fff;
+	padding: 15px;
+	border-radius: 5px;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.dialogWrapper .modal_btn:hover{
+	background: #7b8d8f;
+}
+
+.dialogWrapper .modal_box{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	display: none;
+}
+
+.dialogWrapper .modal_box .modal_bg_shadow{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #000;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.dialogWrapper .modal_box .modal_box_wrap{
+	width: 550px;
+	height: 250px;
+	background: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,100%);
+	border-radius: 5px;
+}
+
+.dialogWrapper .modal_box .modal_box_wrap .modal_close{
+	position: absolute;
+	top: -25px;
+	right: -25px;
+	width: 50px;
+	height: 50px;
+	background: #363d4e;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.dialogWrapper .modal_box .modal_box_wrap .modal_close:before,
+.dialogWrapper .modal_box .modal_box_wrap .modal_close:after{
+	content: "";
+	position: absolute;
+	top: 25px;
+	left: 13px;
+	width: 25px;
+	height: 2px;
+	background: #fff;
+}
+
+.dialogWrapper .modal_box .modal_box_wrap .modal_close:before{
+	transform: rotate(45deg);
+}
+
+.dialogWrapper .modal_box .modal_box_wrap .modal_close:after{
+	transform: rotate(130deg);
+}
+
+.dialogWrapper .modal_box .modal_box_wrap .modal_header{
+	padding: 20px;
+	border-bottom: 1px solid #e0e0e0;
+	height: 60px;
+	font-size: 22px;
+    color:black;
+}
+
+
+.dialogWrapper .modal_box .modal_box_wrap .modal_body{
+	padding: 20px;
+	border-bottom: 1px solid #e0e0e0;
+	height: calc(250px - 120px);
+	font-size: 14px;
+	line-height: 21px;
+    color:black;
+}
+
+.dialogWrapper .modal_box .modal_box_wrap .modal_footer{
+	padding: 20px;
+	height: 60px;
+}
+
+.dialogWrapper .modal_footer .modal_btn_grp{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 100%;
+}
+
+.dialogWrapper .modal_footer .modal_btn_grp .btn{
+	width: 100px;
+	padding: 10px;
+	border-radius: 5px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.dialogWrapper .modal_footer .modal_btn_grp .btn.btn_confirm{
+	margin-left: 10px;
+	background: #363d4e;
+	color: #fff;
+}
+
+.dialogWrapper .modal_footer .modal_btn_grp .btn.btn_cancel{
+	border: 1px solid #363d4e;
+	color: #363d4e;
+}
+
+.dialogWrapper .modal_footer .modal_btn_grp .btn.btn_cancel:hover{
+	background: #363d4e;
+	color: #fff;
+}
+
+.dialogWrapper .modal_footer .modal_btn_grp .btn:hover{
+	background: #7b8d8f;
+}
+
+.dialogWrapper .modal_box.active{
+	display: block;
+}
+
+#resign_btn{
+    z-index: 1;
+}
